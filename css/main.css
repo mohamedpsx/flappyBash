@@ -49,22 +49,22 @@
    100% { background-position: -275px 100%; }
 }
 
-@-webkit-keyframes animBird {
-   from { background-position: 0px 0px; }
-   to { background-position: 0px -96px; }
-}
-@-moz-keyframes animBird {
-   from { background-position: 0px 0px; }
-   to { background-position: 0px -96px; }
-}
-@-o-keyframes animBird {
-   from { background-position: 0px 0px; }
-   to { background-position: 0px -96px; }
-}
-@keyframes animBird {
-   from { background-position: 0px 0px; }
-   to { background-position: 0px -96px; }
-}
+// @-webkit-keyframes animBird {
+//    from { background-position: 0px 0px; }
+//    to { background-position: 0px -96px; }
+// }
+// @-moz-keyframes animBird {
+//    from { background-position: 0px 0px; }
+//    to { background-position: 0px -96px; }
+// }
+// @-o-keyframes animBird {
+//    from { background-position: 0px 0px; }
+//    to { background-position: 0px -96px; }
+// }
+// @keyframes animBird {
+//    from { background-position: 0px 0px; }
+//    to { background-position: 0px -96px; }
+// }
 
 @-webkit-keyframes animPipe {
    0% { left: 900px; }
@@ -167,7 +167,7 @@ Screen - Game
 {
    position: absolute;
    bottom: 0;
-   height: 420px;
+   height: 600px;
    width: 100%;
 }
 
@@ -311,8 +311,8 @@ Screen - Game
 .bird
 {
    position: absolute;
-   width: 34px;
-   height: 24px;
+   width: 60px;
+   height: 60px;
    background-image: url('../assets/bird.png');
    
    -webkit-animation: animBird 300ms steps(4) infinite;

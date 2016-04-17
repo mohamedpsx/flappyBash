@@ -34,7 +34,7 @@ var jump = -4.6;
 var score = 0;
 var highscore = 0;
 
-var pipeheight = 90;
+var pipeheight = 240;
 var pipewidth = 52;
 var pipes = new Array();
 
@@ -45,7 +45,7 @@ var volume = 30;
 var soundJump = new buzz.sound("assets/sounds/sfx_wing.ogg");
 var soundScore = new buzz.sound("assets/sounds/sfx_point.ogg");
 var soundHit = new buzz.sound("assets/sounds/sfx_hit.ogg");
-var soundDie = new buzz.sound("assets/sounds/sfx_die.ogg");
+var soundDie = new buzz.sound("assets/sounds/bash.m4a");
 var soundSwoosh = new buzz.sound("assets/sounds/sfx_swooshing.ogg");
 buzz.all().setVolume(volume);
 
@@ -463,11 +463,11 @@ function updatePipes()
    //Do any pipes need removal?
    $(".pipe").filter(function() { return $(this).position().left <= -100; }).remove()
    
-   //add a new pipe (top height + bottom height  + pipeheight == 420) and put it in our tracker
+   //add a new pipe (top height + bottom height  + pipeheight == 600) and put it in our tracker
    var padding = 80;
-   var constraint = 420 - pipeheight - (padding * 2); //double padding (for top and bottom)
+   var constraint = 600 - pipeheight - (padding * 2); //double padding (for top and bottom)
    var topheight = Math.floor((Math.random()*constraint) + padding); //add lower padding
-   var bottomheight = (420 - pipeheight) - topheight;
+   var bottomheight = (600 - pipeheight) - topheight;
    var newpipe = $('<div class="pipe animated"><div class="pipe_upper" style="height: ' + topheight + 'px;"></div><div class="pipe_lower" style="height: ' + bottomheight + 'px;"></div></div>');
    $("#flyarea").append(newpipe);
    pipes.push(newpipe);
